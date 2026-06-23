@@ -74,6 +74,30 @@ function initCinematicHero() {
     }, "-=1");
 }
 
+
+// Universal App Expansion Lightbox Interface Engine
+function openLightbox(imagePath) {
+    const lightbox = document.getElementById("customAppLightbox");
+    const expandedImg = document.getElementById("lightboxExpandedImage");
+    
+    if (lightbox && expandedImg) {
+        expandedImg.src = imagePath;
+        lightbox.classList.add("is-active");
+        
+        // Disables background window jumping while looking at zoomed images
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById("customAppLightbox");
+    if (lightbox) {
+        lightbox.classList.remove("is-active");
+        
+        // Re-enables document page scrolling smoothly
+        document.body.style.overflow = "";
+    }
+}
 /* ==========================================================================
    ScrollTrigger Layout Sequences
    ========================================================================== */

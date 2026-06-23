@@ -164,60 +164,75 @@
     </div>
 </section>
 
-            <section class="gallery-section" id="gallery">
-                <div class="container text-center">
-                    <span class="section-tag">Curated Collections</span>
-                    <h2 class="section-title">The Memory Archive</h2>
-                </div>
-                <div class="masonry-grid container">
-                    <div class="masonry-item" onclick="openLightbox('images/gallery-1.jpg', 'image')">
-                        <img src="images/one.jpeg" alt="Memory 1">
-                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
-                    </div>
-                
-                    <div class="masonry-item" onclick="openLightbox('images/gallery-2.jpg', 'image')">
-                        <img src="images/z.jpeg" alt="Memory 2">
-                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
-                    </div>
-                    <div class="masonry-item" onclick="openLightbox('images/gallery-3.jpg', 'image')">
-                        <img src="images/three.jpeg" alt="Memory 3">
-                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
-                    </div>
-                     <div class="masonry-grid container">
-                    <div class="masonry-item" onclick="openLightbox('images/gallery-1.jpg', 'image')">
-                        <img src="images/y.jpeg" alt="Memory 1">
-                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
-                    </div>
-                 <div class="masonry-grid container">
-                    <div class="masonry-item" onclick="openLightbox('images/gallery-1.jpg', 'image')">
-                        <img src="images/f.jpeg" alt="Memory 1">
-                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
-                    </div>
-                    <div class="masonry-item" onclick="openLightbox('images/gallery-2.jpg', 'image')">
-                        <img src="images/two.jpeg" alt="Memory 2">
-                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
-                    </div>
-                    <div class="masonry-item" onclick="openLightbox('images/gallery-3.jpg', 'image')">
-                        <img src="images/s.jpeg" alt="Memory 3">
-                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
-                    </div>
-                     <div class="masonry-grid container">
-                    <div class="masonry-item" onclick="openLightbox('images/gallery-1.jpg', 'image')">
-                        <img src="images/g.jpeg" alt="Memory 1">
-                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
-                    </div>
-                
-                    <div class="masonry-item" onclick="openLightbox('images/gallery-2.jpg', 'image')">
-                        <img src="images/k.jpeg" alt="Memory 2">
-                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
-                    </div>
-                    <div class="masonry-item" onclick="openLightbox('images/gallery-3.jpg', 'image')">
-                        <img src="images/o.jpeg" alt="Memory 3">
-                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
-                    </div>
-                    
-                </div>
-            </section>
+           <!-- ==========================================================================
+     SECTION: TIMELINE MEMORY ARCHIVE (MOBILE APPS GRID)
+     ========================================================================== -->
+<section class="gallery-section" id="gallery">
+    <div class="container text-center">
+        <span class="section-tag">Curated Collections</span>
+        <h2 class="section-title">The Memory Archive</h2>
+    </div>
+    
+    <div class="masonry-grid container">
+        
+        <div class="masonry-item" onclick="openLightbox('images/one.jpeg', 'image')">
+            <img src="images/one.jpeg" alt="Memory 1">
+            <div class="item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        
+        <div class="masonry-item" onclick="openLightbox('images/z.jpeg', 'image')">
+            <img src="images/z.jpeg" alt="Memory 2">
+            <div class="item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        
+        <div class="masonry-item" onclick="openLightbox('images/three.jpeg', 'image')">
+            <img src="images/three.jpeg" alt="Memory 3">
+            <div class="item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        
+        <div class="masonry-item" onclick="openLightbox('images/y.jpeg', 'image')">
+            <img src="images/y.jpeg" alt="Memory 4">
+            <div class="item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        
+        <div class="masonry-item" onclick="openLightbox('images/f.jpeg', 'image')">
+            <img src="images/f.jpeg" alt="Memory 5">
+            <div class="item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        
+        <div class="masonry-item" onclick="openLightbox('images/two.jpeg', 'image')">
+            <img src="images/two.jpeg" alt="Memory 6">
+            <div class="item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        
+        <div class="masonry-item" onclick="openLightbox('images/s.jpeg', 'image')">
+            <img src="images/s.jpeg" alt="Memory 7">
+            <div class="item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        
+        <div class="masonry-item" onclick="openLightbox('images/g.jpeg', 'image')">
+            <img src="images/g.jpeg" alt="Memory 8">
+            <div class="item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        
+        <div class="masonry-item" onclick="openLightbox('images/k.jpeg', 'image')">
+            <img src="images/k.jpeg" alt="Memory 9">
+            <div class="item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        
+        <div class="masonry-item" onclick="openLightbox('images/o.jpeg', 'image')">
+            <img src="images/o.jpeg" alt="Memory 10">
+            <div class="item-overlay"><i class="fas fa-expand"></i></div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Lightweight App Lightbox Modal Overlay Element Container -->
+<div id="customAppLightbox" class="lightbox-modal-overlay" onclick="closeLightbox()">
+    <span class="lightbox-close-btn">&times;</span>
+    <img class="lightbox-expanded-img" id="lightboxExpandedImage" src="" alt="Expanded View">
+</div>
 
             <!-- ==========================================================================
      SECTION: IMMERSIVE FLOATING HEART CANVAS (ZERO BORING TEXT)

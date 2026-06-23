@@ -457,6 +457,145 @@ h2.section-title {
     margin-bottom: 1rem;
 }
 
+
+
+
+/* ==========================================================================
+   Premium Asymmetric Memory Archive Layout
+   ========================================================================== */
+.gallery-section {
+    padding: 6rem 1.5rem;
+    background: #09090b;
+}
+
+.gallery-header-container {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+/* Modern Two-Column Mobile Editorial Grid Track */
+.luxury-memory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Custom card aspect framing to make dynamic heights uniform */
+.memory-card {
+    position: relative;
+    aspect-ratio: 1 / 1; /* Sets a crisp grid layout profile */
+    border-radius: 16px;
+    overflow: hidden;
+    background: #18181b;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Alternates every third card to a striking tall aspect frame for aesthetic balance */
+.memory-card:nth-child(3n+1) {
+    aspect-ratio: 4 / 5;
+    grid-row: span 2;
+}
+
+.memory-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps images crisp without stretching */
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Visual Tap feedback */
+.memory-card:active img {
+    transform: scale(0.96);
+}
+
+/* Micro interaction indicator overlay layer */
+.card-expand-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(9, 9, 11, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.memory-card:active .card-expand-overlay {
+    opacity: 1;
+}
+
+.expand-icon {
+    font-size: 1.25rem;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+}
+
+/* ==========================================================================
+   IMMERSIVE POPUP LIGHTBOX SYSTEM
+   ========================================================================== */
+.lightbox-modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    width: 100dvw; height: 100dvh;
+    background: rgba(9, 9, 12, 0.96);
+    z-index: 9999; /* Higher than background music controls */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+/* Activated expansion class */
+.lightbox-modal-overlay.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox-expanded-img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-modal-overlay.is-active .lightbox-expanded-img {
+    transform: scale(1);
+}
+
+.lightbox-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 200;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Desktop Expansion Map Configuration */
+@media (min-width: 769px) {
+    .luxury-memory-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+        gap: 1.5rem;
+    }
+}
+
+
+
+
+
 /* ==========================================================================
    Masonry Production Gallery System
    ========================================================================== */
