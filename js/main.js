@@ -75,6 +75,38 @@ function initCinematicHero() {
 }
 
 
+
+// ==========================================================================
+// GLOBAL FIRST-INTERACTION AUDIO UNLOCK ENGINE
+// ==========================================================================
+function initializeAmbientAudio() {
+    const anniversaryMusic = document.getElementById("bgAnniversaryMusic");
+    
+    if (anniversaryMusic) {
+        anniversaryMusic.volume = 0.4; // Soft 40% volume for premium ambient background mood
+        anniversaryMusic.play()
+            .then(() => {
+                // Success! Clean up all event listeners immediately so they only execute once
+                removeAllAudioTriggers();
+            })
+            .catch(err => {
+                console.log("Waiting for a concrete user interaction gesture...", err);
+            });
+    }
+}
+
+// Wrapper function to strip out the listeners once sound is active
+function removeAllAudioTriggers() {
+    window.removeEventListener("touchstart", initializeAmbientAudio);
+    window.removeEventListener("click", initializeAmbientAudio);
+    window.removeEventListener("scroll", initializeAmbientAudio);
+}
+
+// Attach listeners for every possible first-touch gesture on mobile devices
+window.addEventListener("touchstart", initializeAmbientAudio);
+window.addEventListener("click", initializeAmbientAudio);
+window.addEventListener("scroll", initializeAmbientAudio);
+
 // Universal App Expansion Lightbox Interface Engine
 function openLightbox(imagePath) {
     const lightbox = document.getElementById("customAppLightbox");
