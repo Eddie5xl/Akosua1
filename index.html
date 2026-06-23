@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>730 Days of Us | Edwin & Akosua</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="ambient-glow"></div>
+    <div class="stars-container" id="starsContainer"></div>
+
+    <div class="audio-player" id="audioPlayer">
+        <button class="audio-toggle" id="audioToggleBtn" aria-label="Toggle Music">
+            <i class="fas fa-music"></i>
+            <span class="pulse-ring"></span>
+        </button>
+        <div class="audio-controls" id="audioControls">
+            <span class="track-name">memory-sound.mp3</span>
+            <div class="volume-container">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.7">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+
+        
+        
+        <audio id="bgAudio" src="audio/sound.mp3" loop></audio>
+    </div>
+
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <section class="hero-section" id="hero">
+                <div class="hero-media-wrapper">
+                    <div class="hero-bg" style="background-image: linear-gradient(to bottom, rgba(15,15,18,0.3), rgba(15,15,18,0.95)), url('images/hero-bg.jpg');"></div>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title split-text">Happy Anniversary <span class="accent-heart" id="secretHeartIcon">💝💌</span> </h1>
+                    <p class="hero-subtitle">730 Days. Countless Memories. One Beautiful Journey.</p>
+                    <button class="cta-btn gold-btn" onclick="scrollToSection('#chapter1')">Begin Our Story</button>
+                </div>
+                <div class="scroll-indicator">
+                    <span class="scroll-line"></span>
+                    <span class="scroll-text">Scroll to Discover</span>
+                </div>
+            </section>
+
+            <section class="chapter-section" id="chapter1">
+                <div class="container grid-2">
+                    <div class="chapter-media reveal-frame">
+                        <img src="images/babby.jpeg" alt="Our Beginning Placeholder" class="parallax-img">
+                    </div>
+                    <div class="chapter-text-block">
+                        <span class="section-tag">Chapter One</span>
+                        <h2 class="section-title">Every beautiful story begins with a moment.</h2>
+                        <p class="body-text secondary-color">A simple conversation. A smile. A connection neither of us knew would become one of the most important parts of our lives.</p>
+                        <p class="body-text secondary-color">Looking back now, I'm grateful that moment happened.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="timeline-section" id="timeline">
+    <div class="container text-center">
+        <span class="section-tag">The Essence of You</span>
+        <h2 class="section-title">my K💝💌💋❤️</h2>
+    </div>
+    
+    <div class="timeline-container">
+        <div class="timeline-progress-bar">
+            <div class="timeline-progress-fill"></div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card" onclick="toggleTimelineCard(this)">
+                <span class="milestone-date">The Essence of You</span>
+                <h3>A Light in Every Room</h3>
+                <div class="timeline-expand-content">
+                    <div class="timeline-text-wrap">
+                        <img src="images/light.jpeg" alt="Akosua's Smile" class="timeline-media">
+                        <p>There is a specific warmth that comes with your smile. It’s the kind of light that completely changes the energy of a room the moment you step in. Looking at your pictures, this is always the first thing that stands out—your joy is completely contagious.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card" onclick="toggleTimelineCard(this)">
+                <span class="milestone-date">Elegant & Graceful</span>
+                <h3>Effortless Grace</h3>
+                <div class="timeline-expand-content">
+                    <div class="timeline-text-wrap">
+                        <img src="images/hero-bg.jpeg" alt="Akosua's Elegance" class="timeline-media">
+                        <p>Whether you are dressed up for an occasion or just caught in a completely candid, quiet moment, you carry yourself with an effortless elegance. It’s a quiet confidence and beauty that is entirely yours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card" onclick="toggleTimelineCard(this)">
+                <span class="milestone-date">The Focused Mind</span>
+                <h3>Driven & Brilliant</h3>
+                <div class="timeline-expand-content">
+                    <div class="timeline-text-wrap">
+                        <img src="images/cl.jpeg" alt="Akosua's Ambition" class="timeline-media">
+                        <p>Beyond the beauty is a brilliant mind. Watching you focus, work through your goals, and pursue your ambitions with so much dedication is genuinely inspiring. You bring so much heart and intelligence to everything you touch.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card" onclick="toggleTimelineCard(this)">
+                <span class="milestone-date">Pure Warmth</span>
+                <h3>Kind Eyes & A Gentle Soul</h3>
+                <div class="timeline-expand-content">
+                    <div class="timeline-text-wrap">
+                        <img src="images/WhatsApp Image 2026-06-22 at 11.13.58 PM.jpeg" alt="Akosua's Kindness" class="timeline-media">
+                        <p>Your pictures capture more than just a pretty face; they capture your spirit. The kindness in your eyes shows exactly how deeply you care about the people around you. You are a safe space and a comfort.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card" onclick="toggleTimelineCard(this)">
+                <span class="milestone-date">Joyful Moments</span>
+                <h3>Unfiltered Happiness</h3>
+                <div class="timeline-expand-content">
+                    <div class="timeline-text-wrap">
+                        <img src="images/joy.jpeg" alt="Akosua's Laughter" class="timeline-media">
+                        <p>My absolute favorite pictures of you are the ones where you are laughing completely unfiltered. It’s the truest representation of your beautiful soul—vibrant, full of life, and bringing happiness to everyone lucky enough to be near you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card" onclick="toggleTimelineCard(this)">
+                <span class="milestone-date">Simply Irreplaceable</span>
+                <h3>Today, Tomorrow, Always</h3>
+                <div class="timeline-expand-content">
+                    <div class="timeline-text-wrap">
+                        <img src="images/mnu.jpeg" alt="Celebrating Akosua" class="timeline-media">
+                        <p>Every single portrait, every quick snapshot, and every memory of you serves as a reminder of how incredible you are. This space is dedicated entirely to celebrating you, Akosua—exactly as you are.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+            <section class="gallery-section" id="gallery">
+                <div class="container text-center">
+                    <span class="section-tag">Curated Collections</span>
+                    <h2 class="section-title">The Memory Archive</h2>
+                </div>
+                <div class="masonry-grid container">
+                    <div class="masonry-item" onclick="openLightbox('images/gallery-1.jpg', 'image')">
+                        <img src="images/one.jpeg" alt="Memory 1">
+                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+                
+                    <div class="masonry-item" onclick="openLightbox('images/gallery-2.jpg', 'image')">
+                        <img src="images/z.jpeg" alt="Memory 2">
+                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+                    <div class="masonry-item" onclick="openLightbox('images/gallery-3.jpg', 'image')">
+                        <img src="images/three.jpeg" alt="Memory 3">
+                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+                     <div class="masonry-grid container">
+                    <div class="masonry-item" onclick="openLightbox('images/gallery-1.jpg', 'image')">
+                        <img src="images/y.jpeg" alt="Memory 1">
+                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+                 <div class="masonry-grid container">
+                    <div class="masonry-item" onclick="openLightbox('images/gallery-1.jpg', 'image')">
+                        <img src="images/f.jpeg" alt="Memory 1">
+                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+                    <div class="masonry-item" onclick="openLightbox('images/gallery-2.jpg', 'image')">
+                        <img src="images/two.jpeg" alt="Memory 2">
+                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+                    <div class="masonry-item" onclick="openLightbox('images/gallery-3.jpg', 'image')">
+                        <img src="images/s.jpeg" alt="Memory 3">
+                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+                     <div class="masonry-grid container">
+                    <div class="masonry-item" onclick="openLightbox('images/gallery-1.jpg', 'image')">
+                        <img src="images/g.jpeg" alt="Memory 1">
+                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+                
+                    <div class="masonry-item" onclick="openLightbox('images/gallery-2.jpg', 'image')">
+                        <img src="images/k.jpeg" alt="Memory 2">
+                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+                    <div class="masonry-item" onclick="openLightbox('images/gallery-3.jpg', 'image')">
+                        <img src="images/o.jpeg" alt="Memory 3">
+                        <div class="item-overlay"><i class="fas fa-expand"></i></div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- ==========================================================================
+     SECTION: IMMERSIVE FLOATING HEART CANVAS (ZERO BORING TEXT)
+     ========================================================================== -->
+<section class="love-canvas-section" id="thingsILove" onclick="handleCanvasTap(event)">
+    <!-- High-Contrast Typography Layer -->
+    <div class="canvas-text-overlay">
+        <span class="pulse-sparkle">✨ Touch Anywhere</span>
+        <h2 id="activeReasonDisplay" class="active-reason-text">Tap to unlock reasons</h2>
+    </div>
+    
+    <!-- Exploding Micro-Particles Container -->
+    <div class="vfx-particle-container" id="particleContainer"></div>
+</section>
+
+            <section class="video-wall-section" id="videoWall">
+                <div class="container text-center">
+                    <span class="section-tag">Moving Memories</span>
+                    <h2 class="section-title">Our Cinema Wall</h2>
+                </div>
+                <div class="video-grid container">
+                    <div class="video-grid-item" onclick="openLightbox('videos/video-2.mp4', 'video')">
+                        <video src="videos/video-2.mp4" muted loop class="preview-video"></video>
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </div>
+                    <div class="video-grid-item" onclick="openLightbox('videos/video-3.mp4', 'video')">
+                        <video src="videos/video-3.mp4" muted loop class="preview-video"></video>
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </div>
+                    <div class="video-grid-item" onclick="openLightbox('videos/video-4.mp4', 'video')">
+                        <video src="videos/video-4.mp4" muted loop class="preview-video"></video>
+                        <div class="play-overlay"><i class="fas fa-play-circle"></i></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="letter-section" id="letter">
+                <div class="letter-box glass-card">
+                    <h2>Dear Akosua,</h2>
+                    <div class="typewriter-container" id="typewriterTarget">
+                        </div>
+                </div>
+            </section>
+
+            <section class="stats-section" id="stats">
+                <div class="container grid-4">
+                    <div class="stat-box">
+                        <div class="counter" data-target="730">0</div>
+                        <p class="stat-label">Days Together</p>
+                    </div>
+                    <div class="stat-box">
+                        <div class="counter" data-target="342">0</div>
+                        <p class="stat-label">Photos Together</p>
+                    </div>
+                    <div class="stat-box">
+                        <div class="counter" data-target="88">0</div>
+                        <p class="stat-label">Videos Together</p>
+                    </div>
+                    <div class="stat-box">
+                        <div class="counter" data-target="124">0</div>
+                        <p class="stat-label">Fight and Arguments</p>
+                    </div>
+                </div>
+                <div class="infinity-box text-center">
+                    <div class="infinity-symbol">∞</div>
+                    <p class="stat-label">Laughs Shared</p>
+                </div>
+            </section>
+
+            <section class="future-section" id="future">
+                <div class="future-bg-fx"></div>
+                <div class="container text-center relative-z">
+                    <span class="section-tag">Next Horizons</span>
+                    <h2 class="section-title italic-serif">Chapter Three Begins Here</h2>
+                    <p class="body-text wide-p">Two years isn't the end of our story. It's proof that what we have is worth continuing. The best chapters are still ahead of us.</p>
+                </div>
+            </section>
+
+            <section class="final-section" id="finalMoment">
+                <canvas id="confettiCanvas"></canvas>
+                <div class="final-content text-center">
+                    <h2 class="final-title">Happy 2nd Anniversary, Akosua.</h2>
+                    <p class="final-p">Thank you for every memory.</p>
+                    <p class="final-p">Thank you for every laugh.</p>
+                    <p class="final-p">Thank you for every lesson.</p>
+                    <p class="final-p emphasis-gold">Thank you for us.</p>
+                    <button class="cta-btn accent-btn" onclick="scrollToSection('#hero')">Replay Our Story</button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <div class="lightbox" id="globalLightbox">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <div class="lightbox-content" id="lightboxContent"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
